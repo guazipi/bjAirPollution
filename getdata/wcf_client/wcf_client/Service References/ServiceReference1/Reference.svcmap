@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9439d54e-7e39-4c4c-b375-13e3e939b085" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://zx.bjmemc.com.cn/DataService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DataService.xsd" MetadataType="Schema" ID="7a55a36a-0017-480c-88a6-06d66dba6c42" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DataService1.xsd" MetadataType="Schema" ID="3c247c01-17a3-4778-91b3-4a5b214a82f3" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DataService.disco" MetadataType="Disco" ID="0af7ae40-e040-4dd4-9b2a-544071724837" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?disco" />
+    <MetadataFile FileName="DataService2.xsd" MetadataType="Schema" ID="788a0693-b9d3-4b1c-a367-a37c08446950" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DataService3.xsd" MetadataType="Schema" ID="d89a44a5-a752-4ee0-adc2-4c65990911e5" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DataService.wsdl" MetadataType="Wsdl" ID="7a3aaaf6-c0bb-4b76-a48c-9f566364aa98" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?wsdl" />
+    <MetadataFile FileName="DataService4.xsd" MetadataType="Schema" ID="4ae98986-7367-46a8-9560-f885d987ed74" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DataService1.wsdl" MetadataType="Wsdl" ID="4aa882aa-4a71-447d-bb0c-8b44959d0d7b" SourceId="1" SourceUrl="http://zx.bjmemc.com.cn/DataService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

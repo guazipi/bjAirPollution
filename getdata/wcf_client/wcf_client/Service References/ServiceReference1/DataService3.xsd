@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/BEPB.Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BEPB.Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="ArrayOfTB_Message">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_Message" nillable="true" type="tns:TB_Message" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_Message" nillable="true" type="tns:ArrayOfTB_Message" />
+  <xs:complexType name="TB_Message">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AQI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Date_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="PriPollutant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Prompt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="zone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_Message" nillable="true" type="tns:TB_Message" />
+  <xs:complexType name="ArrayOfTB_RTC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_RTC" nillable="true" type="tns:TB_RTC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_RTC" nillable="true" type="tns:ArrayOfTB_RTC" />
+  <xs:complexType name="TB_RTC">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AQI" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AVG24h" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="Date_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Day8hMaxEval" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Day8hMaxValue" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="Day8hValue" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="DayMaxEval" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="DayMaxValue" nillable="true" type="xs:float" />
+          <xs:element minOccurs="0" name="Eval" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Eval24h" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Pollutant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriPollutant" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PriPollutantMobile" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quality" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Station" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:float" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_RTC" nillable="true" type="tns:TB_RTC" />
+  <xs:complexType name="ArrayOfTB_Alert">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TB_Alert" nillable="true" type="tns:TB_Alert" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTB_Alert" nillable="true" type="tns:ArrayOfTB_Alert" />
+  <xs:complexType name="TB_Alert">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Date_Time" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="MContent" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Publisher" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TB_Alert" nillable="true" type="tns:TB_Alert" />
+</xs:schema>

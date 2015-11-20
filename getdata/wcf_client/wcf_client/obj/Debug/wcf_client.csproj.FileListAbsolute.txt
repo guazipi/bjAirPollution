@@ -1,0 +1,15 @@
+d:\documents\visual studio 2010\Projects\wcf_client\wcf_client\bin\wcf_client.dll
+d:\documents\visual studio 2010\Projects\wcf_client\wcf_client\bin\wcf_client.pdb
+d:\documents\visual studio 2010\Projects\wcf_client\wcf_client\obj\Debug\ResolveAssemblyReference.cache
+d:\documents\visual studio 2010\Projects\wcf_client\wcf_client\obj\Debug\wcf_client.dll
+d:\documents\visual studio 2010\Projects\wcf_client\wcf_client\obj\Debug\wcf_client.pdb
+C:\Users\Administrator\Desktop\wcf_client\wcf_client\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\wcf_client\wcf_client\obj\Debug\wcf_client.dll
+C:\Users\Administrator\Desktop\wcf_client\wcf_client\bin\wcf_client.dll
+C:\Users\Administrator\Desktop\wcf_client\wcf_client\bin\wcf_client.pdb
+C:\Users\Administrator\Desktop\wcf_client\wcf_client\obj\Debug\wcf_client.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcf_client\wcf_client\bin\wcf_client.dll
+C:\Users\Administrator\Desktop\obtainDataWCF\wcf_client\wcf_client\bin\wcf_client.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcf_client\wcf_client\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\obtainDataWCF\wcf_client\wcf_client\obj\Debug\wcf_client.dll
+C:\Users\Administrator\Desktop\obtainDataWCF\wcf_client\wcf_client\obj\Debug\wcf_client.pdb
