@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42379DEB-ABD0-4EEC-824E-DEBEF114F992}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>BEPB</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System.Windows" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.Maps.MapControl" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="Microsoft.Maps.MapControl.Common" />
+    <Reference Include="System.Windows.Controls.Data" />
+    <Reference Include="System.Windows.Controls.Toolkit" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.DataVisualization.Toolkit" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Data" />
+    <Reference Include="System.Windows.Browser" />
+    <Reference Include="System.Json" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Serialization" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="BEPB\ImageButton.cs" />
+    <Compile Include="BEPB\PushedImageButton.cs" />
+    <Compile Include="BEPB\ImageButton2.cs" />
+    <Compile Include="BEPB\DistrictsNameVisibilityConverter.cs" />
+    <Compile Include="BEPB\QualityFaceConverter.cs" />
+    <Compile Include="BEPB\IntegerAdditionConverter.cs" />
+    <Compile Include="BEPB\DoubleMultConverter.cs" />
+    <Compile Include="BEPB\VisibilityConverter.cs" />
+    <Compile Include="BEPB\StringSpitConverter.cs" />
+    <Compile Include="BEPB\StringNotNULLConverter.cs" />
+    <Compile Include="BEPB\CMapConfig.cs" />
+    <Compile Include="BEPB\RenderImage.cs" />
+    <Compile Include="BEPB\AQILevel.cs" />
+    <Compile Include="BEPB\PredictData.cs" />
+    <Compile Include="BEPB\RTCData.cs" />
+    <Compile Include="BEPB\Forecast.cs" />
+    <Compile Include="BEPB\IAQIData.cs" />
+    <Compile Include="BEPB\StationData.cs" />
+    <Compile Include="BEPB\QualityFace.cs" />
+    <Compile Include="BEPB\WRWData.cs" />
+    <Compile Include="BEPB\WRWData24h.cs" />
+    <Compile Include="BEPB\AirDataContext.cs" />
+    <Compile Include="BEPB\PathToolTip.cs" />
+    <Compile Include="BEPB\MainPage.cs" />
+    <Compile Include="BEPB\AlertLevel.cs" />
+    <Compile Include="BEPB\AlertMessage.cs" />
+    <Compile Include="BEPB\AlertDesc.cs" />
+    <Compile Include="BEPB\Direction.cs" />
+    <Compile Include="BEPB\Marquee.cs" />
+    <Compile Include="BEPB\CMap.cs" />
+    <Compile Include="BEPB\BSMapMode.cs" />
+    <Compile Include="BEPB\MobileServiceReference\ServiceSoap.cs" />
+    <Compile Include="BEPB\MobileServiceReference\ServiceSoapChannel.cs" />
+    <Compile Include="BEPB\MobileServiceReference\GetAlertCompletedEventArgs.cs" />
+    <Compile Include="BEPB\MobileServiceReference\GetDataCompletedEventArgs.cs" />
+    <Compile Include="BEPB\MobileServiceReference\GetPredictCompletedEventArgs.cs" />
+    <Compile Include="BEPB\MobileServiceReference\ServiceSoapClient.cs" />
+    <Compile Include="BEPB\FloatPopup.cs" />
+    <Compile Include="BEPB\MapSource.cs" />
+    <Compile Include="BEPB\TiandituTileSource.cs" />
+    <Compile Include="BEPB\LocalTiandituTileSource.cs" />
+    <Compile Include="BEPB\MyGoogleTileSource.cs" />
+    <Compile Include="BEPB\App.cs" />
+    <Compile Include="BEPB\TabButton.cs" />
+    <Compile Include="BEPB\StationPushpin.cs" />
+    <Compile Include="BEPB\DataServiceReference\StructuralObject.cs" />
+    <Compile Include="BEPB\DataServiceReference\EntityObject.cs" />
+    <Compile Include="BEPB\DataServiceReference\TB_Message.cs" />
+    <Compile Include="BEPB\DataServiceReference\TB_RTC.cs" />
+    <Compile Include="BEPB\DataServiceReference\TB_Alert.cs" />
+    <Compile Include="BEPB\DataServiceReference\EntityKey.cs" />
+    <Compile Include="BEPB\DataServiceReference\EntityKeyMember.cs" />
+    <Compile Include="BEPB\DataServiceReference\DataService.cs" />
+    <Compile Include="BEPB\DataServiceReference\DataServiceChannel.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetWebCountsCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetWebDataCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetWebAlertCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetWebPredictCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\DayForecastCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetRTCCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetRTC24hCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\GetAlertCompletedEventArgs.cs" />
+    <Compile Include="BEPB\DataServiceReference\DataServiceClient.cs" />
+    <Compile Include="BEPB\NavigationCtrl.cs" />
+    <EmbeddedResource Include="BEPB.g.resources" />
+  </ItemGroup>
+</Project>
