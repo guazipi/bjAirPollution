@@ -1,0 +1,12 @@
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Release\wcfconsole.exe.config
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Release\wcfconsole.exe
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Release\wcfconsole.pdb
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Release\ResolveAssemblyReference.cache
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Release\wcfconsole.exe
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Release\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Release\wcfconsole.exe.config
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Release\wcfconsole.exe
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Release\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Release\wcfconsole.exe
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Release\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Release\ResolveAssemblyReference.cache

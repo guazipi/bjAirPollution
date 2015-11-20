@@ -1,0 +1,12 @@
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Debug\wcfconsole.exe.config
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Debug\wcfconsole.exe
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\bin\Debug\wcfconsole.pdb
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Debug\wcfconsole.exe
+d:\documents\visual studio 2010\Projects\wcfconsole\wcfconsole\obj\x86\Debug\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Debug\wcfconsole.exe.config
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Debug\wcfconsole.exe
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Debug\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Debug\wcfconsole.exe
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\bin\Debug\wcfconsole.pdb
+C:\Users\Administrator\Desktop\obtainDataWCF\wcfconsole\wcfconsole\obj\x86\Debug\ResolveAssemblyReference.cache

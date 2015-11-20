@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="/Imports">
+      <xsd:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd0" />
+      <xsd:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BEPB.Web" />
+      <xsd:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://zx.bjmemc.com.cn/DataService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DataService_GetWebCounts_InputMessage">
+    <wsdl:part name="parameters" element="GetWebCounts" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebCounts_OutputMessage">
+    <wsdl:part name="parameters" element="GetWebCountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebData_InputMessage">
+    <wsdl:part name="parameters" element="GetWebData" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebData_OutputMessage">
+    <wsdl:part name="parameters" element="GetWebDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebAlert_InputMessage">
+    <wsdl:part name="parameters" element="GetWebAlert" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebAlert_OutputMessage">
+    <wsdl:part name="parameters" element="GetWebAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebPredict_InputMessage">
+    <wsdl:part name="parameters" element="GetWebPredict" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetWebPredict_OutputMessage">
+    <wsdl:part name="parameters" element="GetWebPredictResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_DayForecast_InputMessage">
+    <wsdl:part name="parameters" element="DayForecast" />
+  </wsdl:message>
+  <wsdl:message name="DataService_DayForecast_OutputMessage">
+    <wsdl:part name="parameters" element="DayForecastResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetRTC_InputMessage">
+    <wsdl:part name="parameters" element="GetRTC" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetRTC_OutputMessage">
+    <wsdl:part name="parameters" element="GetRTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetRTC24h_InputMessage">
+    <wsdl:part name="parameters" element="GetRTC24h" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetRTC24h_OutputMessage">
+    <wsdl:part name="parameters" element="GetRTC24hResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetAlert_InputMessage">
+    <wsdl:part name="parameters" element="GetAlert" />
+  </wsdl:message>
+  <wsdl:message name="DataService_GetAlert_OutputMessage">
+    <wsdl:part name="parameters" element="GetAlertResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DataService">
+    <wsdl:operation name="GetWebCounts">
+      <wsdl:input wsaw:Action="urn:DataService/GetWebCounts" message="DataService_GetWebCounts_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWebCountsResponse" message="DataService_GetWebCounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebData">
+      <wsdl:input wsaw:Action="urn:DataService/GetWebData" message="DataService_GetWebData_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWebDataResponse" message="DataService_GetWebData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebAlert">
+      <wsdl:input wsaw:Action="urn:DataService/GetWebAlert" message="DataService_GetWebAlert_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWebAlertResponse" message="DataService_GetWebAlert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWebPredict">
+      <wsdl:input wsaw:Action="urn:DataService/GetWebPredict" message="DataService_GetWebPredict_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetWebPredictResponse" message="DataService_GetWebPredict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DayForecast">
+      <wsdl:input wsaw:Action="urn:DataService/DayForecast" message="DataService_DayForecast_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/DayForecastResponse" message="DataService_DayForecast_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTC">
+      <wsdl:input wsaw:Action="urn:DataService/GetRTC" message="DataService_GetRTC_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetRTCResponse" message="DataService_GetRTC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRTC24h">
+      <wsdl:input wsaw:Action="urn:DataService/GetRTC24h" message="DataService_GetRTC24h_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetRTC24hResponse" message="DataService_GetRTC24h_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAlert">
+      <wsdl:input wsaw:Action="urn:DataService/GetAlert" message="DataService_GetAlert_InputMessage" />
+      <wsdl:output wsaw:Action="urn:DataService/GetAlertResponse" message="DataService_GetAlert_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
