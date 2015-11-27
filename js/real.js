@@ -463,7 +463,13 @@
         d3.select(MAP_SVG_ID).append("path")
             .datum({type: "FeatureCollection", features: features})
             .attr("class", "station")
-            .attr("d", mesh.path);
+            .attr("d", mesh.path)
+            .append("text")
+            .text(function (d) {
+                console.log(d);
+                return d.features[0].properties.name;
+
+            });
     }
 
     function plotCurrentPosition(projection) {
@@ -552,6 +558,28 @@
         return points;
     }
 
+    function buildPointsFromGFS(){
+        var points=[];
+
+        $.ajaxSettings.async = false;
+        $.getJSON("../dataset/current-wind-surface.json",function(data){
+            var firstObj=data[0];
+            var secondObj=data[1];
+            //var lo1=115.0,la1=39.0,lo2=118.0,la2=42.0;
+            for(var la1=39.0;la1<42.0;la1=+0.25){
+                for(var lo1=115.0;lo1<118.0;lo1=+0.25){
+                    points.push([lo1,la1,[firstObj.data[0],secondObj.data[0]]]);
+                    firstObj.data.shift();
+                    secondObj.data.shift();
+                }
+            }
+
+        });
+        $.ajaxSettings.async = true;
+
+        return points;
+    }
+
     /**
      * Returns the index of v in array a (adapted from Java and darkskyapp/binary-search).
      */
@@ -630,17 +658,18 @@
      * the magnitude dx^2 + dy^2. If the vector is not visible because it lies outside the display mask, then m
      * has the value INVISIBLE (-1).
      */
-    function interpolateField(data, settings, masks) {
+    function interpolateField( settings, masks) {
         log.time("interpolating field");
         var d = when.defer();
 
-        if (data.length === 0) {
-            return d.reject("No Data in Response");
-        }
+        //if (data.length === 0) {
+        //    return d.reject("No Data in Response");
+        //}
 
-        var points = buildPointsFromSamples(data[0].samples, settings.projection, function (sample) {
-            return isValidSample(sample.wind) ? componentize(sample.wind) : null;
-        });
+        //var points = buildPointsFromSamples(data[0].samples, settings.projection, function (sample) {
+        //    return isValidSample(sample.wind) ? componentize(sample.wind) : null;
+        //});
+        var points=buildPointsFromGFS();
 
         if (points.length < 5) {
             return d.reject("東京都環境局がデータを調整中");
@@ -954,6 +983,9 @@
     var renderTask = when.all([settingsTask, meshTask]).then(apply(render));
     var plotStationsTask = when.all([stations, meshTask]).then(apply(plotStations));
     var overlayTask = when.all([stations, webdata, settingsTask, renderTask]).then(apply(drawOverlay));
+    var fieldTask        = when.all([settingsTask, renderTask   ]).then(apply(interpolateField));
+    var animateTask      = when.all([settingsTask, fieldTask              ]).then(apply(animate));
+    var postInitTask     = when.all([settingsTask, fieldTask, overlayTask ]).then(apply(postInit));
 
 
     when.all([
@@ -963,7 +995,10 @@
         meshTask,
         renderTask,
         plotStationsTask,
-        overlayTask
+        overlayTask,
+        fieldTask,
+        animateTask,
+        postInitTask
     ]).then(null, report);
 
     // Let's try an experiment! Define a dependency graph of tasks and use promises to let the control flow occur
