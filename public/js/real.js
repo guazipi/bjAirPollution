@@ -537,7 +537,7 @@
         var points = [];
 
         $.ajaxSettings.async = false;
-        $.getJSON("/../dataset/current-wind-surface.json", function (data) {
+        $.getJSON("dataset/weather/current/realTimeWind.json", function (data) {
             var firstObj = data[0];
             var secondObj = data[1];
             //var lo1=115.0,la1=39.0,lo2=118.0,la2=42.0;
@@ -962,8 +962,8 @@
     var meshTask = when.all([topoTask, settingsTask]).then(apply(buildMeshes));
     var renderTask = when.all([settingsTask, meshTask]).then(apply(render));
     var plotStationsTask = when.all([stations, meshTask]).then(apply(plotStations));
-    var overlayTask = when.all([stations, webdata, settingsTask, renderTask]).then(apply(drawOverlay));
-    var fieldTask = when.all([webdata,settingsTask, renderTask]).then(apply(interpolateField));
+    var overlayTask = when.all([stations, airData, settingsTask, renderTask]).then(apply(drawOverlay));
+    var fieldTask = when.all([airData,settingsTask, renderTask]).then(apply(interpolateField));
     var animateTask = when.all([settingsTask, fieldTask]).then(apply(animate));
     var postInitTask = when.all([settingsTask, fieldTask, overlayTask]).then(apply(postInit));
 
