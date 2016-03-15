@@ -6,7 +6,9 @@
  * Time: 9:14
  */
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t06z.pgrb2.0p25.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&subregion=&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs.2016031406');
+//curl_setopt($curl, CURLOPT_URL, 'http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t06z.pgrb2.0p25.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&subregion=&leftlon=0&rightlon=360&toplat=90&bottomlat=-90&dir=%2Fgfs.2016031406');
+curl_setopt($curl, CURLOPT_URL, 'http://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl?file=gfs.t06z.pgrb2.0p25.f000&lev_10_m_above_ground=on&var_UGRD=on&var_VGRD=on&subregion=&leftlon=115.0&rightlon=118.0&toplat=42.0&bottomlat=39.0&dir=%2Fgfs.2016031406');
+
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec($curl);
 curl_close($curl);
