@@ -965,7 +965,7 @@
     var overlayTask = when.all([stations, airData, settingsTask, renderTask]).then(apply(drawOverlay));
     var fieldTask = when.all([airData,settingsTask, renderTask]).then(apply(interpolateField));
     var animateTask = when.all([settingsTask, fieldTask]).then(apply(animate));
-    var postInitTask = when.all([settingsTask, fieldTask, overlayTask]).then(apply(postInit));
+    var postInitTask = when.all([settingsTask, fieldTask, overlayTask]).then(apply(postInit));//click显示点击处的信息
 
 
     when.all([
