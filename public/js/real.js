@@ -100,7 +100,7 @@
         topography: d3.select(DISPLAY_ID).attr("data-topography"),
         samples: d3.select(DISPLAY_ID).attr("data-samples"),
         //type: d3.select(DISPLAY_ID).attr("data-type"),
-        type: "PM2.5",
+        type: "NO2",
         date: d3.select(DISPLAY_ID).attr("data-date")
     };
     var overlayType = OVERLAY_TYPES[displayData.type];
