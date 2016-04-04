@@ -381,6 +381,7 @@
         // d3.select(DISPLAY_ID).node().appendChild(canvas);  // uncomment to make mask visible for debugging
 
         var width = canvas.width;
+        //(http://www.w3school.com.cn/tags/canvas_getimagedata.asp)对getImageData进行注解
         var data = g.getImageData(0, 0, canvas.width, canvas.height).data;
 
         log.timeEnd("render masks");
@@ -391,7 +392,7 @@
                 var i = (y * width + x) * 4;  // red channel is field mask
                 return data[i] > 0;
             },
-            displayMask: function (x, y) {
+            displayMask: function (x, y) {//圈定显示区域,在此是北京市地区
                 var i = (y * width + x) * 4 + 1;  // green channel is display mask
                 return data[i] > 0;
             }
@@ -965,7 +966,7 @@
     var overlayTask = when.all([stations, airData, settingsTask, renderTask]).then(apply(drawOverlay));
     var fieldTask = when.all([airData,settingsTask, renderTask]).then(apply(interpolateField));
     var animateTask = when.all([settingsTask, fieldTask]).then(apply(animate));
-    var postInitTask = when.all([settingsTask, fieldTask, overlayTask]).then(apply(postInit));//click显示点击处的信息
+    var postInitTask = when.all([settingsTask, fieldTask, overlayTask]).then(apply(postInit));//添加click之后显示点击处的信息的代码
 
 
     when.all([
